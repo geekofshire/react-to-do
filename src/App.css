@@ -1,0 +1,156 @@
+@import url(https://fonts.googleapis.com/css2?family=Jersey+15&display=swap);
+@import url(https://fonts.googleapis.com/css2?family=Jersey+15&family=Shadows+Into+Light&display=swap);
+
+body {
+	font-family: "Shadows Into Light", sans-serif;
+	margin: 0;
+	padding: 0;
+	display: flex;
+	justify-content: center; /* Center horizontally */
+	height: 100vh;
+	background-color: #32b1a4;
+}
+
+.title {
+	text-align: center;
+	font-weight: 400;
+	font-style: normal;
+	font-size: 80px;
+}
+
+.container {
+	width: 800px;
+	padding: 20px;
+	font-size: larger;
+}
+
+.controls {
+	display: flex;
+	justify-content: space-evenly;
+}
+
+form {
+	display: flex;
+}
+
+.form-input {
+	padding: 10px;
+	margin-right: 10px;
+	font-size: 16px;
+	border: 1px solid #ccc; /* Add border */
+	border-radius: 5px; /* Add rounded corners */
+	width: calc(100% - 20px);
+}
+
+.form-input:focus {
+	outline: none; /* Remove default focus outline */
+	border-color: #e6ca70; /* Change border color on focus */
+}
+
+button {
+	padding: 10px 20px;
+	font-size: 16px;
+	background-color: #52514d;
+	color: #fff; /* Text color */
+	border: none;
+	border-radius: 5px; /* Add rounded corners */
+	cursor: pointer;
+	width: auto;
+	height: 44px;
+}
+
+button:hover {
+	background-color: #7a930d; /* Darken color on hover */
+}
+
+.filter-container label {
+	font-size: 27px;
+	margin-right: 10px;
+}
+
+.filter-container select {
+	padding: 8px;
+	font-size: 16px;
+	border: 1px solid #ccc;
+	border-radius: 5px;
+}
+
+ol {
+	margin: 35px 90px;
+}
+
+.todo-item {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	margin-bottom: 20px;
+}
+
+.todo-item-text {
+	flex-grow: 1;
+	font-size: 32px;
+}
+
+.todo-item-buttons {
+	display: flex;
+	gap: 5px;
+	height: 35px;
+}
+
+.todo-item-input {
+	padding: 10px;
+	font-size: 16px;
+	border: 1px solid #ccc;
+	border-radius: 5px;
+}
+
+/* Styles for desktop */
+@media (min-width: 768px) {
+
+	body {
+		font-size: 18px;
+	}
+
+	.container {
+		width: 800px;
+	}
+
+	.filter-container label {
+		font-size: 27px;
+	}
+
+	.todo-item-text {
+		font-size: 32px;
+	}
+}
+
+/* Styles for mobile */
+@media (max-width: 767px) {
+
+	.container {
+		width: 100%;
+		padding: 10px;
+	}
+
+	.controls {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+	}
+
+	.title {
+		font-size: 48px;
+	}
+
+	.filter-container label {
+		font-size: 20px;
+	}
+
+	.todo-item-text {
+		font-size: 24px;
+	}
+
+	ol {
+		margin: 10px;
+	}
+}
