@@ -21,6 +21,7 @@ export default function App() {
   }, [tasks]);
 
   const addTask = (taskText) => {
+    if (!taskText) return;
     const newTask = {
       id: uuidv4(),
       text: taskText,
@@ -34,18 +35,19 @@ export default function App() {
   };
 
   const editTask = (taskId, newText) => {
+    if (!newText) return;
     setTasks(
       tasks.map((task) =>
-        task.id === taskId ? { ...task, text: newText } : task
-      )
+        task.id === taskId ? { ...task, text: newText } : task,
+      ),
     );
   };
 
   const toggleDone = (taskId) => {
     setTasks(
       tasks.map((task) =>
-        task.id === taskId ? { ...task, done: !task.done } : task
-      )
+        task.id === taskId ? { ...task, done: !task.done } : task,
+      ),
     );
   };
 
